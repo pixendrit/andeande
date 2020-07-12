@@ -19,7 +19,6 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: 'andeande',
-        repositoryName: process.env.REPO_NAME
         accessToken: `${process.env.API_KEY}`,
         linkResolver: ({ node, key, value }) => doc => `/${doc.uid}`,
         htmlSerializer: ({ node, key, value }) => (type, element, content, children) => {
